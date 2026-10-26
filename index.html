@@ -78,6 +78,10 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li class="mobile-drawer-cta">
+          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">👑 Buy Credits</a>
+          <a href="#download" class="btn btn-primary">📥 Download App</a>
+        </li>
       </ul>
 
       <div class="nav-actions">
@@ -300,97 +304,167 @@
   <!-- Pricing Section -->
   <section class="section" id="pricing">
     <div class="container">
-      <div class="section-tag">
-        <span class="badge badge-version">TRANSPARENT PRICING</span>
+      <div class="pricing-header-center">
+        <div class="section-tag" style="justify-content:center;">
+          <span class="badge badge-version">TRANSPARENT PLANS</span>
+        </div>
+        <h2>Simple plans for every editor</h2>
+        <p class="subtitle">
+          Pay with UPI, card or net banking. Your license key appears right after payment and is emailed to you.
+        </p>
+
+        <!-- Segmented Tab Switcher -->
+        <div class="pricing-switcher-wrapper" role="tablist" aria-label="Pricing Categories">
+          <button type="button" class="pricing-switch-btn active" id="tab-ai-editing" role="tab" aria-selected="true" aria-controls="panel-ai-editing" onclick="switchPricingTab('ai-editing')">
+            <span class="btn-title">AI Editing</span>
+            <span class="btn-sub">Free · Monthly · Yearly</span>
+          </button>
+          <button type="button" class="pricing-switch-btn" id="tab-smart-ai" role="tab" aria-selected="false" aria-controls="panel-smart-ai" onclick="switchPricingTab('smart-ai')">
+            <span class="btn-title">Smart AI Editing</span>
+            <span class="btn-sub">Wedding packs · Unlimited</span>
+          </button>
+        </div>
+
+        <p class="pricing-tab-caption" id="pricing-tab-caption">
+          Automatic trimming, beat sync and silence cutting — everything runs on your computer.
+        </p>
       </div>
-      <h2>Pay As You Go — Koi Monthly Lock-In Nahi</h2>
-      <p class="section-desc">Website se credits khareedo aur desktop app me saal bhar kabhi bhi use karo.</p>
 
-      <div class="pricing-grid">
-        <!-- Plan 1 -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Free Community</h3>
-            <p>Testing aur basic trimming ke liye</p>
+      <!-- Panel 1: AI Editing (Free, Monthly, Yearly) -->
+      <div class="pricing-tab-panel active" id="panel-ai-editing" role="tabpanel" aria-labelledby="tab-ai-editing">
+        <div class="plans-grid-3">
+          
+          <!-- Card 1: Free -->
+          <div class="plan-card">
+            <div class="plan-name">Free</div>
+            <div class="price-row">
+              <span class="price-amount">₹0</span>
+            </div>
+            <div class="price-term">forever · with a daily limit</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>1 project per day</span></li>
+              <li><span class="check-icon">✓</span> <span>All workflows &amp; editors</span></li>
+              <li><span class="check-icon">✓</span> <span>Shake trim, beat sync, silence cut</span></li>
+            </ul>
+            <a href="#download" class="btn-dark-plan">Free plan</a>
           </div>
-          <div class="pricing-price">
-            ₹0 <span class="term">/ Forever Free</span>
+
+          <!-- Card 2: AI Editing Monthly -->
+          <div class="plan-card">
+            <div class="plan-name">AI Editing · Monthly</div>
+            <div class="price-row">
+              <span class="price-amount">₹399</span>
+            </div>
+            <div class="price-term">per month</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>No daily limit — unlimited projects</span></li>
+              <li><span class="check-icon">✓</span> <span>All workflows &amp; editors</span></li>
+              <li><span class="check-icon">✓</span> <span>30 days · 1 computer</span></li>
+            </ul>
+            <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn-purple">Buy now</a>
           </div>
-          <div class="pricing-unit-rate">₹0 per wedding</div>
-          <ul class="pricing-features">
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 100% Offline Local Trimming</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Single Camera Workflow</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> DaVinci Resolve &amp; Premiere XML</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Community Discord Support</li>
-          </ul>
-          <a href="#download" class="btn btn-secondary">Download Free App</a>
+
+          <!-- Card 3: AI Editing Yearly (Best Value) -->
+          <div class="plan-card highlighted">
+            <div class="card-badge">Best value</div>
+            <div class="plan-name">AI Editing · Yearly</div>
+            <div class="price-row">
+              <span class="price-amount">₹2,499</span>
+              <span class="price-original">₹4,788</span>
+            </div>
+            <div class="price-term">₹208/month, billed yearly · save 48%</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>No daily limit — unlimited projects</span></li>
+              <li><span class="check-icon">✓</span> <span>All workflows &amp; editors</span></li>
+              <li><span class="check-icon">✓</span> <span>365 days · 1 computer</span></li>
+            </ul>
+            <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn-gold">Buy now</a>
+          </div>
+
         </div>
+      </div>
 
-        <!-- Plan 2 -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Starter Pack</h3>
-            <p>Freelance wedding video editors ke liye</p>
-          </div>
-          <div class="pricing-price">
-            ₹999 <span class="term">/ 5 Weddings</span>
-          </div>
-          <div class="pricing-unit-rate">₹199 per wedding</div>
-          <ul class="pricing-features">
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <strong>5 Full Wedding Credits</strong></li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Zero-Audio Multicam Sync (2-3 Cams)</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Beat-Synced 9:16 Reels &amp; 16:9 Teasers</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Premiere Pro Native CEP Bridge</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> EDIUS 25fps PAL Sequence Export</li>
-          </ul>
-          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-secondary">Buy Starter Pack</a>
-        </div>
+      <!-- Panel 2: Smart AI Editing (5, 11, 30 Weddings, Unlimited) -->
+      <div class="pricing-tab-panel" id="panel-smart-ai" role="tabpanel" aria-labelledby="tab-smart-ai">
+        <div class="plans-grid-4">
 
-        <!-- Plan 3 (Featured) -->
-        <div class="pricing-card featured">
-          <div class="pricing-badge">🔥 MOST POPULAR</div>
-          <div class="pricing-header">
-            <h3>Studio Pro Pack</h3>
-            <p>Busy photo &amp; video studios ke liye</p>
+          <!-- Card 1: 5 Weddings -->
+          <div class="plan-card">
+            <div class="plan-name">Smart AI · 5 Weddings</div>
+            <div class="price-row">
+              <span class="price-amount">₹999</span>
+            </div>
+            <div class="price-term">₹200 per wedding</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>5 Smart AI weddings</span></li>
+              <li><span class="check-icon">✓</span> <span>AI music &amp; voiceover</span></li>
+              <li><span class="check-icon">✓</span> <span>Smart AI Assistant</span></li>
+              <li><span class="check-icon">✓</span> <span>Unlimited editing · 365 days</span></li>
+            </ul>
+            <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn-purple">Buy now</a>
           </div>
-          <div class="pricing-price">
-            ₹2,499 <span class="term">/ 20 Weddings</span>
-          </div>
-          <div class="pricing-unit-rate">Only ₹125 per wedding</div>
-          <ul class="pricing-features">
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <strong>20 Full Wedding Credits</strong></li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Everything in Starter Pack</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Cloud AI Deep Multimodal Emotion Scoring</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 1-Click Hardware Lock Reset for New PC</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Priority WhatsApp Support Hotline</li>
-          </ul>
-          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-primary">Get Studio Pro Pack</a>
-        </div>
 
-        <!-- Plan 4 -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Agency Unlimited</h3>
-            <p>High-volume post production houses</p>
+          <!-- Card 2: 11 Weddings (Most Popular) -->
+          <div class="plan-card highlighted">
+            <div class="card-badge">Most popular</div>
+            <div class="plan-name">Smart AI · 11 Weddings</div>
+            <div class="price-row">
+              <span class="price-amount">₹1,999</span>
+              <span class="price-original">₹2,200</span>
+            </div>
+            <div class="price-term">₹182 per wedding · save 9%</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>11 Smart AI weddings</span></li>
+              <li><span class="check-icon">✓</span> <span>AI music &amp; voiceover</span></li>
+              <li><span class="check-icon">✓</span> <span>Smart AI Assistant</span></li>
+              <li><span class="check-icon">✓</span> <span>Unlimited editing · 365 days</span></li>
+            </ul>
+            <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn-gold">Buy now</a>
           </div>
-          <div class="pricing-price">
-            ₹7,999 <span class="term">/ 1 Full Year</span>
+
+          <!-- Card 3: 30 Weddings (Best Value) -->
+          <div class="plan-card highlighted">
+            <div class="card-badge">Best value</div>
+            <div class="plan-name">Smart AI · 30 Weddings</div>
+            <div class="price-row">
+              <span class="price-amount">₹4,999</span>
+              <span class="price-original">₹6,000</span>
+            </div>
+            <div class="price-term">₹167 per wedding · save 17%</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>30 Smart AI weddings</span></li>
+              <li><span class="check-icon">✓</span> <span>AI music &amp; voiceover</span></li>
+              <li><span class="check-icon">✓</span> <span>Smart AI Assistant</span></li>
+              <li><span class="check-icon">✓</span> <span>Unlimited editing · 365 days</span></li>
+            </ul>
+            <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn-gold">Buy now</a>
           </div>
-          <div class="pricing-unit-rate">Unlimited weddings</div>
-          <ul class="pricing-features">
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <strong>Unlimited Wedding Timeline Builds</strong></li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Multi-System Editing Seats</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> VIP Direct Developer WhatsApp Access</li>
-            <li><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Early Access to v1.2 Features</li>
-          </ul>
-          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-secondary">Get Agency License</a>
+
+          <!-- Card 4: Smart AI Unlimited · Yearly (50% Off) -->
+          <div class="plan-card highlighted">
+            <div class="card-badge">50% off</div>
+            <div class="plan-name">Smart AI Unlimited · Yearly</div>
+            <div class="price-row">
+              <span class="price-amount">₹14,999</span>
+              <span class="price-original">₹29,999</span>
+            </div>
+            <div class="price-term">Unlimited Smart AI weddings · save 50%</div>
+            <ul class="plan-features-list">
+              <li><span class="check-icon">✓</span> <span>Unlimited Smart AI shot review</span></li>
+              <li><span class="check-icon">✓</span> <span>AI music &amp; voiceover</span></li>
+              <li><span class="check-icon">✓</span> <span>Smart AI Assistant</span></li>
+              <li><span class="check-icon">✓</span> <span>Unlimited editing · 1 year</span></li>
+            </ul>
+            <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn-gold">Renew</a>
+          </div>
+
         </div>
       </div>
 
       <!-- Pricing Dedicated Page Callout -->
       <div style="text-align:center;margin-top:40px;">
         <a href="pricing.html" class="btn btn-lg btn-outline-gold">
-          📊 View Detailed Feature Comparison Table &amp; Pricing FAQ →
+          📊 View Detailed Feature Comparison Table &amp; Full Pricing Page →
         </a>
       </div>
     </div>

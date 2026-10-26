@@ -48,17 +48,42 @@ function initMobileMenu() {
   const toggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      const isVisible = navLinks.style.display === 'flex';
-      navLinks.style.display = isVisible ? 'none' : 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '100%';
-      navLinks.style.left = '0';
-      navLinks.style.width = '100%';
-      navLinks.style.background = '#07090e';
-      navLinks.style.padding = '20px';
-      navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = navLinks.classList.toggle('active');
+      toggle.classList.toggle('active', isActive);
+      toggle.innerHTML = isActive ? '✕' : '☰';
+      document.body.classList.toggle('menu-open', isActive);
+    });
+
+    // Close when clicking any nav link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.innerHTML = '☰';
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.innerHTML = '☰';
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.innerHTML = '☰';
+        document.body.classList.remove('menu-open');
+      }
     });
   }
 }
@@ -76,4 +101,41 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+// 5. Pricing Tab Switcher (AI Editing vs Smart AI Editing)
+function switchPricingTab(tabKey) {
+  const tabAI = document.getElementById('tab-ai-editing');
+  const tabSmart = document.getElementById('tab-smart-ai');
+  const panelAI = document.getElementById('panel-ai-editing');
+  const panelSmart = document.getElementById('panel-smart-ai');
+  const caption = document.getElementById('pricing-tab-caption');
+
+  if (!tabAI || !tabSmart || !panelAI || !panelSmart) return;
+
+  if (tabKey === 'ai-editing') {
+    tabAI.classList.add('active');
+    tabAI.setAttribute('aria-selected', 'true');
+    tabSmart.classList.remove('active');
+    tabSmart.setAttribute('aria-selected', 'false');
+
+    panelAI.classList.add('active');
+    panelSmart.classList.remove('active');
+
+    if (caption) {
+      caption.textContent = 'Automatic trimming, beat sync and silence cutting — everything runs on your computer.';
+    }
+  } else {
+    tabSmart.classList.add('active');
+    tabSmart.setAttribute('aria-selected', 'true');
+    tabAI.classList.remove('active');
+    tabAI.setAttribute('aria-selected', 'false');
+
+    panelSmart.classList.add('active');
+    panelAI.classList.remove('active');
+
+    if (caption) {
+      caption.textContent = 'Smart AI watches your footage, picks the best moments and edits on your command. Unlimited AI Editing included.';
+    }
+  }
 }
