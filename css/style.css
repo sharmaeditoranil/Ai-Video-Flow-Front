@@ -95,12 +95,12 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(7, 9, 14, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-color);
-  padding: 16px 0;
+  z-index: 1000;
+  background: rgba(9, 12, 20, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 0;
   transition: all 0.3s ease;
 }
 
@@ -108,6 +108,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .brand-logo {
@@ -115,24 +116,35 @@ p {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  margin-right: 14px;
 }
 
 .brand-logo img {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
 }
 
 .brand-name {
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   font-weight: 800;
-  color: #fff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   white-space: nowrap !important;
   display: inline-flex;
   align-items: center;
+  line-height: 1;
+}
+
+.brand-name .text-ai {
+  color: #ffffff;
+}
+
+.brand-name .text-video {
+  color: #38bdf8;
+}
+
+.brand-name .text-flow {
+  color: #f59e0b;
 }
 
 .brand-name span.sub {
@@ -142,7 +154,7 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -153,35 +165,34 @@ p {
 }
 
 .nav-links > li > a {
-  color: var(--text-secondary);
+  color: #94a3b8;
   text-decoration: none;
   font-size: 0.92rem;
-  font-weight: 600;
-  padding: 6px 9px;
-  border-radius: 6px;
+  font-weight: 500;
+  padding: 6px 0;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  transition: all 0.2s ease;
+  gap: 5px;
+  transition: color 0.2s ease;
   white-space: nowrap;
 }
 
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  background: transparent;
 }
 
 .arrow-down {
-  font-size: 0.65rem;
-  color: #94a3b8;
-  transition: transform 0.25s ease, color 0.25s ease;
+  font-size: 0.55rem;
+  color: #64748b;
+  transition: transform 0.2s ease, color 0.2s ease;
   display: inline-block;
 }
 
 .has-dropdown:hover .arrow-down {
   transform: rotate(180deg);
-  color: var(--accent-gold);
+  color: #38bdf8;
 }
 
 /* Elegant Floating Dropdown Menu (Desktop) */
@@ -261,15 +272,47 @@ p {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
 .nav-actions .btn {
+  border-radius: 8px !important;
   padding: 8px 18px;
   font-size: 0.88rem;
+  font-weight: 600;
   white-space: nowrap !important;
   flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.nav-actions .btn-outline-gold {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px !important;
+}
+
+.nav-actions .btn-outline-gold:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.nav-actions .btn-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0a0d14;
+  border: 1px solid transparent;
+  border-radius: 8px !important;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+}
+
+.nav-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.45);
+  transform: translateY(-1px);
 }
 
 /* Buttons */
