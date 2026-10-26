@@ -56,9 +56,12 @@ function initMobileMenu() {
       document.body.classList.toggle('menu-open', isActive);
     });
 
-    // Close when clicking any nav link
+    // Close when clicking any nav link (except parent dropdown headers on mobile)
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
+        if (link.closest('.has-dropdown') && link.classList.contains('nav-link') && window.innerWidth <= 960) {
+          return;
+        }
         navLinks.classList.remove('active');
         toggle.classList.remove('active');
         toggle.innerHTML = '☰';
