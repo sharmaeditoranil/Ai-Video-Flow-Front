@@ -37,10 +37,15 @@ html {
   color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
   line-height: 1.6;
   background-image: 
     radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
@@ -1675,22 +1680,32 @@ body.menu-open {
   /* Segmented Switcher & Plans on Mobile */
   .pricing-switcher-wrapper {
     width: 100%;
-    max-width: 480px;
+    max-width: 500px;
     display: flex;
+    flex-direction: row;
+    margin: 24px auto 14px;
+    padding: 4px;
+    gap: 4px;
+    background: #0d121d;
+    border-radius: 14px;
   }
 
   .pricing-switch-btn {
-    flex: 1;
-    padding: 10px 14px;
+    flex: 1 1 50%;
+    padding: 10px 8px;
     text-align: center;
+    border-radius: 10px;
   }
 
   .pricing-switch-btn .btn-title {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    white-space: nowrap;
   }
 
   .pricing-switch-btn .btn-sub {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
+    line-height: 1.25;
+    margin-top: 2px;
   }
 
   .plans-grid-4 {
@@ -1707,25 +1722,75 @@ body.menu-open {
   }
 
   .whats-included-card {
-    padding: 24px 16px;
+    padding: 22px 12px;
     margin-top: 36px;
     border-radius: 16px;
   }
 
+  .whats-included-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .included-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+  }
+
+  .included-table {
+    min-width: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
   .included-table th,
   .included-table td {
-    padding: 12px 14px;
-    font-size: 0.84rem;
+    padding: 10px 4px;
+    font-size: 0.8rem;
+    line-height: 1.35;
   }
 
   .included-table th:first-child,
   .included-table td:first-child {
-    position: sticky;
-    left: 0;
-    background: #0c101a;
-    z-index: 2;
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
-    min-width: 160px;
+    width: 44%;
+    text-align: left;
+    padding-left: 6px;
+    font-size: 0.82rem;
+    position: static;
+    box-shadow: none;
+    min-width: unset;
+  }
+
+  .included-table th:not(:first-child),
+  .included-table td:not(:first-child) {
+    width: 18.6%;
+    text-align: center;
+    padding: 10px 2px;
+    font-size: 0.78rem;
+  }
+
+  .included-table th {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .included-table td .check {
+    font-size: 1rem;
+  }
+
+  .included-table td .dash {
+    font-size: 0.95rem;
+  }
+
+  .desktop-only {
+    display: inline;
   }
 
   /* Comparison Table Mobile Swipe & Sticky Header */
@@ -1964,16 +2029,52 @@ body.menu-open {
   }
 
   .pricing-switcher-wrapper {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    max-width: 340px;
-    margin: 20px auto 10px;
+    max-width: 100%;
+    margin: 18px auto 10px;
+    padding: 3px;
+    gap: 3px;
   }
 
   .pricing-switch-btn {
-    width: 100%;
+    flex: 1 1 50%;
+    width: 50%;
     text-align: center;
-    padding: 10px 12px;
+    padding: 8px 4px;
+  }
+
+  .pricing-switch-btn .btn-title {
+    font-size: 0.86rem;
+  }
+
+  .pricing-switch-btn .btn-sub {
+    font-size: 0.64rem;
+    margin-top: 1px;
+    line-height: 1.2;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .included-table th,
+  .included-table td {
+    padding: 8px 2px;
+    font-size: 0.74rem;
+  }
+
+  .included-table th:first-child,
+  .included-table td:first-child {
+    font-size: 0.76rem;
+    padding-left: 4px;
+    width: 42%;
+  }
+
+  .included-table th:not(:first-child),
+  .included-table td:not(:first-child) {
+    width: 19.3%;
   }
 
   /* Floating WhatsApp on small mobile */
