@@ -115,7 +115,7 @@ p {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  margin-right: 24px;
+  margin-right: 14px;
 }
 
 .brand-logo img {
@@ -142,7 +142,7 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -155,13 +155,13 @@ p {
 .nav-links > li > a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 6px 9px;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -169,7 +169,7 @@ p {
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
   color: #fff;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .arrow-down {
