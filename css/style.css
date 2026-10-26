@@ -260,7 +260,15 @@ p {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.nav-actions .btn {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 /* Buttons */
@@ -277,6 +285,8 @@ p {
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -1640,7 +1650,38 @@ body.menu-open {
 }
 
 .mobile-drawer-cta {
-  display: none;
+  display: none !important;
+}
+
+/* Responsive Desktop Header Optimization (prevents button wrapping and squishing) */
+@media (max-width: 1220px) and (min-width: 993px) {
+  .nav-wrapper {
+    gap: 10px;
+  }
+  .nav-links {
+    gap: 4px;
+  }
+  .nav-links > li > a {
+    padding: 6px 8px;
+    font-size: 0.86rem;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .nav-actions .btn {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+  .brand-logo {
+    gap: 8px;
+  }
+  .brand-logo img {
+    width: 34px;
+    height: 34px;
+  }
+  .brand-name {
+    font-size: 1.15rem;
+  }
 }
 
 @media (max-width: 992px) {
