@@ -56,16 +56,38 @@ function initMobileMenu() {
       document.body.classList.toggle('menu-open', isActive);
     });
 
-    // Close when clicking any nav link (except parent dropdown headers on mobile)
+    // Mobile accordion for dropdown menus
+    const dropdownParents = navLinks.querySelectorAll('.has-dropdown');
+    dropdownParents.forEach(parent => {
+      const parentLink = parent.querySelector(':scope > a');
+      if (parentLink) {
+        parentLink.addEventListener('click', (e) => {
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = parent.classList.contains('mobile-open');
+            // Close other dropdowns for a clean accordion effect
+            dropdownParents.forEach(p => {
+              if (p !== parent) p.classList.remove('mobile-open');
+            });
+            parent.classList.toggle('mobile-open', !isOpen);
+          }
+        });
+      }
+    });
+
+    // Close when clicking any sublink or standalone link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        if (link.closest('.has-dropdown') && link.classList.contains('nav-link') && window.innerWidth <= 960) {
+        // Do not close drawer if tapping the top parent dropdown trigger on mobile
+        if (link.parentElement && link.parentElement.classList.contains('has-dropdown') && window.innerWidth <= 992) {
           return;
         }
         navLinks.classList.remove('active');
         toggle.classList.remove('active');
         toggle.innerHTML = '☰';
         document.body.classList.remove('menu-open');
+        dropdownParents.forEach(p => p.classList.remove('mobile-open'));
       });
     });
 
@@ -76,6 +98,7 @@ function initMobileMenu() {
         toggle.classList.remove('active');
         toggle.innerHTML = '☰';
         document.body.classList.remove('menu-open');
+        dropdownParents.forEach(p => p.classList.remove('mobile-open'));
       }
     });
 
@@ -86,6 +109,7 @@ function initMobileMenu() {
         toggle.classList.remove('active');
         toggle.innerHTML = '☰';
         document.body.classList.remove('menu-open');
+        dropdownParents.forEach(p => p.classList.remove('mobile-open'));
       }
     });
   }
