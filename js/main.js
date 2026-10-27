@@ -198,3 +198,146 @@ function switchHeroNLE(editorKey) {
     if (badgeRight) badgeRight.innerHTML = '<span>🎨 FCPXML Timeline Ready for DaVinci Color Grade</span>';
   }
 }
+
+// 7. Interactive Workflow Studio UI (Screenshots 1 & 2)
+let currentStudioWf = 'tutorial';
+let currentStudioDest = 'davinci';
+
+const studioWfData = {
+  wedding: {
+    title: 'Wedding Film Suite',
+    sub: 'Teaser · Highlight · Full film (2–8 Cams)',
+    speed: '14 Secs',
+    cuts: '120+ Cuts',
+    nleOutput: 'Multi-cam XML sequence with ceremony markers & ritual tags',
+    saving: 'Save 10–14 Hours'
+  },
+  reels: {
+    title: 'Reels & Shorts Viral Engine',
+    sub: '9:16 vertical, fast cuts & audio beat transient tracking',
+    speed: '8 Secs',
+    cuts: '45 Snappy Cuts',
+    nleOutput: '9:16 vertical 1080x1920 sequence ready for IG & YouTube',
+    saving: 'Save 3–5 Hours'
+  },
+  youtube: {
+    title: 'YouTube Creator Suite',
+    sub: 'Main long-form timeline + automatically generated Shorts',
+    speed: '12 Secs',
+    cuts: '80+ Cuts',
+    nleOutput: 'Primary 16:9 narrative timeline + vertical teaser sub-sequences',
+    saving: 'Save 6–8 Hours'
+  },
+  music: {
+    title: 'Music Video Montage',
+    sub: 'Beat-synced montage snapped to audio waveforms',
+    speed: '9 Secs',
+    cuts: '60+ Beat Cuts',
+    nleOutput: 'Rhythmic jump cuts mapped on every musical transient',
+    saving: 'Save 4–6 Hours'
+  },
+  podcast: {
+    title: 'Podcast & Interview Master',
+    sub: 'Cut dead silences + 9:16 viral video shorts',
+    speed: '11 Secs',
+    cuts: '150+ Pause Cuts',
+    nleOutput: 'Dynamic speaker switcher track with zero dead air',
+    saving: 'Save 5–7 Hours'
+  },
+  tutorial: {
+    title: 'Tutorial / Class Suite',
+    sub: 'Cut dead air + auto chapters & screen recording sync',
+    speed: '12 Secs',
+    cuts: '95+ Gap Cuts',
+    nleOutput: 'Cleaned master track with chapter markers for export',
+    saving: 'Save 6–9 Hours'
+  }
+};
+
+const studioDestNames = {
+  davinci: 'DaVinci Resolve (10-Bit FCPXML)',
+  premiere: 'Adobe Premiere Pro (Native CEP Bridge)',
+  edius: 'Grass Valley EDIUS (25fps PAL Project)',
+  all: 'All Supported NLEs (Universal XML & FCPXML)'
+};
+
+function selectStudioWorkflow(wfKey) {
+  currentStudioWf = wfKey;
+  document.querySelectorAll('.wf-choice-card').forEach(card => {
+    card.classList.toggle('active', card.getAttribute('data-wf') === wfKey);
+  });
+  updateStudioTelemetry();
+}
+
+function selectStudioDestination(destKey) {
+  currentStudioDest = destKey;
+  document.querySelectorAll('.sendto-card').forEach(card => {
+    card.classList.toggle('active', card.getAttribute('data-dest') === destKey);
+  });
+  updateStudioTelemetry();
+}
+
+function updateStudioTelemetry() {
+  const data = studioWfData[currentStudioWf] || studioWfData.tutorial;
+  const destName = studioDestNames[currentStudioDest] || studioDestNames.davinci;
+
+  const titleEl = document.getElementById('wf-telemetry-wf-title');
+  const speedEl = document.getElementById('wf-telemetry-speed');
+  const cutsEl = document.getElementById('wf-telemetry-cuts');
+  const saveEl = document.getElementById('wf-telemetry-save');
+  const logDestEl = document.getElementById('wf-sim-dest-name');
+  const logDescEl = document.getElementById('wf-sim-desc');
+
+  if (titleEl) titleEl.textContent = data.title;
+  if (speedEl) speedEl.textContent = data.speed;
+  if (cutsEl) cutsEl.textContent = data.cuts;
+  if (saveEl) saveEl.textContent = data.saving;
+  if (logDestEl) logDestEl.textContent = destName;
+  if (logDescEl) logDescEl.textContent = data.nleOutput;
+}
+
+function triggerTimelineBuild() {
+  const btn = document.getElementById('btn-build-timelines');
+  const bar = document.getElementById('wf-sim-progress-fill');
+  const statusEl = document.getElementById('wf-sim-status-text');
+
+  if (!btn) return;
+  
+  const originalText = btn.innerHTML;
+  btn.disabled = true;
+  btn.style.opacity = '0.9';
+  btn.innerHTML = '⚡ Building Multi-cam Timelines...';
+
+  if (bar) bar.style.width = '0%';
+  if (statusEl) statusEl.innerHTML = '<span class="progress">⏳ AI analyzing multi-track footage &amp; audio waveforms...</span>';
+
+  let step = 0;
+  const interval = setInterval(() => {
+    step += 25;
+    if (bar) bar.style.width = step + '%';
+
+    if (step === 25 && statusEl) {
+      statusEl.innerHTML = '<span class="progress">⚡ Zero-Audio optical sync locked across all angles...</span>';
+    } else if (step === 50 && statusEl) {
+      statusEl.innerHTML = '<span class="progress">✂️ Smart In-Clip trimmer removing blurry pans &amp; dead air...</span>';
+    } else if (step === 75 && statusEl) {
+      statusEl.innerHTML = '<span class="progress">🎬 Rendering native sequence for ' + (studioDestNames[currentStudioDest] || 'Editor') + '...</span>';
+    } else if (step >= 100) {
+      clearInterval(interval);
+      if (bar) bar.style.width = '100%';
+      if (statusEl) {
+        statusEl.innerHTML = '<span class="check">✓ Success: ' + (studioWfData[currentStudioWf]?.title || 'Timeline') + ' ready! Open directly in ' + (studioDestNames[currentStudioDest] || 'NLE') + '.</span>';
+      }
+      btn.innerHTML = '✓ Timelines Built Successfully!';
+      btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }, 3200);
+    }
+  }, 350);
+}
+
