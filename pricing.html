@@ -44,7 +44,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3.2">
 
   <!-- JSON-LD Structured Data: BreadcrumbList + Product + OfferCatalog + FAQPage -->
   <script type="application/ld+json">
@@ -175,6 +175,14 @@
     ]
   }
   </script>
+  <!-- Critical Header Base Safeguard -->
+  <style>
+    .brand-name { white-space: nowrap !important; display: inline-flex !important; align-items: center !important; }
+    .dropdown-menu { display: none; }
+    .has-dropdown:hover > .dropdown-menu { display: block; }
+    .mobile-drawer-cta { display: none !important; }
+    .nav-links, .dropdown-menu, .dropdown-menu li { list-style: none !important; margin: 0; padding: 0; }
+  </style>
 </head>
 
 <body>
@@ -183,7 +191,8 @@
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-logo">
         <img src="assets/icon.png" alt="AI Video Flow Logo">
-        <span class="brand-name"><span class="text-ai">Ai</span><span class="text-video">Video</span><span class="text-flow">Flow</span></span>
+        <span class="brand-name"><span class="text-ai">Ai</span><span class="text-video">Video</span><span
+            class="text-flow">Flow</span></span>
       </a>
 
       <ul class="nav-links">
@@ -191,7 +200,8 @@
         <li class="has-dropdown">
           <a href="index.html#features">Product <span class="arrow-down">▾</span></a>
           <ul class="dropdown-menu">
-            <li><a href="zero-audio-multicam-sync.html">⚡ Zero-Audio Multicam Sync <span class="badge-mini">HOT</span></a></li>
+            <li><a href="zero-audio-multicam-sync.html">⚡ Zero-Audio Multicam Sync <span
+                  class="badge-mini">HOT</span></a></li>
             <li><a href="index.html#features">✂️ Smart In-Clip Trimming</a></li>
             <li><a href="index.html#features">🎵 Beat-Synced Teasers &amp; Reels</a></li>
             <li><a href="index.html#features">💖 Indian Ritual &amp; Emotion AI</a></li>
@@ -203,8 +213,10 @@
         <li class="has-dropdown">
           <a href="index.html#editors">Solutions <span class="arrow-down">▾</span></a>
           <ul class="dropdown-menu">
-            <li><a href="davinci-resolve-wedding-editing.html">🎨 DaVinci Resolve Plugin <span class="badge-mini">HOT</span></a></li>
-            <li><a href="edius-wedding-video-editing.html">⚡ Grass Valley EDIUS (25fps PAL) <span class="badge-mini">INDIA</span></a></li>
+            <li><a href="davinci-resolve-wedding-editing.html">🎨 DaVinci Resolve Plugin <span
+                  class="badge-mini">HOT</span></a></li>
+            <li><a href="edius-wedding-video-editing.html">⚡ Grass Valley EDIUS (25fps PAL) <span
+                  class="badge-mini">INDIA</span></a></li>
             <li><a href="premiere-pro-wedding-editing.html">🎬 Adobe Premiere Pro Bridge</a></li>
             <li><a href="index.html#editors">💍 Indian Wedding Mixing Suite</a></li>
           </ul>
@@ -218,7 +230,8 @@
           <a href="index.html#faq">Resources <span class="arrow-down">▾</span></a>
           <ul class="dropdown-menu menu-right">
             <li><a href="index.html#faq">❓ Frequently Asked Questions (FAQ)</a></li>
-            <li><a href="https://license.aivideoflow.in/index.php/admin" target="_blank">🔑 Customer License Portal</a></li>
+            <li><a href="https://license.aivideoflow.in/index.php/admin" target="_blank">🔑 Customer License Portal</a>
+            </li>
             <li><a href="index.html#download">📥 Download Native Desktop App</a></li>
             <li><a href="refund.html">🛡️ 7-Day Refund Guarantee</a></li>
           </ul>
@@ -237,13 +250,15 @@
 
         <!-- Mobile Drawer CTA (only visible inside mobile slide drawer) -->
         <li class="mobile-drawer-cta">
-          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">Buy Credits</a>
+          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">Buy
+            Credits</a>
           <a href="index.html#download" class="btn btn-primary">Download App</a>
         </li>
       </ul>
 
       <div class="nav-actions">
-        <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">Buy Credits</a>
+        <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">Buy
+          Credits</a>
         <a href="index.html#download" class="btn btn-primary">Download App</a>
         <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
       </div>
@@ -701,7 +716,7 @@
     <span>Chat on WhatsApp</span>
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3.2"></script>
 </body>
 
 </html>
