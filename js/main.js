@@ -166,3 +166,35 @@ function switchPricingTab(tabKey) {
     }
   }
 }
+
+// 6. Interactive Hero NLE Workflow Switcher
+function switchHeroNLE(editorKey) {
+  const cards = document.querySelectorAll('.nle-bridge-card');
+  const mockupImg = document.getElementById('hero-nle-mockup-img');
+  const mockupTitle = document.getElementById('hero-nle-mockup-title');
+  const badgeRight = document.getElementById('hero-badge-nle');
+
+  if (!cards.length || !mockupImg) return;
+
+  cards.forEach(card => card.classList.remove('active'));
+
+  const activeCard = document.querySelector(`.nle-bridge-card[data-editor="${editorKey}"]`);
+  if (activeCard) activeCard.classList.add('active');
+
+  if (editorKey === 'premiere') {
+    mockupImg.src = 'assets/premiere-pro-multicam.jpg';
+    mockupImg.alt = 'AI Video Flow + Adobe Premiere Pro CEP Bridge';
+    if (mockupTitle) mockupTitle.textContent = 'AI VIDEO FLOW ➔ ADOBE PREMIERE PRO (NATIVE CEP MULTICAM)';
+    if (badgeRight) badgeRight.innerHTML = '<span>🎬 Native CEP Sequence Created in Premiere Pro</span>';
+  } else if (editorKey === 'edius') {
+    mockupImg.src = 'assets/edius-wedding-workflow.jpg';
+    mockupImg.alt = 'AI Video Flow + Grass Valley EDIUS 25fps Workflow';
+    if (mockupTitle) mockupTitle.textContent = 'AI VIDEO FLOW ➔ GRASS VALLEY EDIUS 9/X/11 (25fps PAL SEQUENCE)';
+    if (badgeRight) badgeRight.innerHTML = '<span>⚡ 25fps PAL Timeline Exported to EDIUS</span>';
+  } else if (editorKey === 'davinci') {
+    mockupImg.src = 'assets/davinci-resolve-workflow.jpg';
+    mockupImg.alt = 'AI Video Flow + DaVinci Resolve 10-bit Color Grade Workflow';
+    if (mockupTitle) mockupTitle.textContent = 'AI VIDEO FLOW ➔ DAVINCI RESOLVE (FCPXML 10-BIT COLOR GRADE)';
+    if (badgeRight) badgeRight.innerHTML = '<span>🎨 FCPXML Timeline Ready for DaVinci Color Grade</span>';
+  }
+}

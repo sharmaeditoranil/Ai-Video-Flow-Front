@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3.2">
+  <link rel="stylesheet" href="css/style.css?v=3.5">
 
   <!-- JSON-LD Structured Data: WebSite + Organization + SoftwareApplication + FAQPage -->
   <script type="application/ld+json">
@@ -294,42 +294,114 @@
   <!-- Hero Section -->
   <section class="hero-section" id="download">
     <div class="container hero-content">
-      <div class="section-tag">
-        <span class="badge badge-version">✨ v1.1.9 Released · DaVinci Resolve · Premiere Pro · EDIUS</span>
+      
+      <!-- Top Integration Badge -->
+      <div class="hero-bridge-badge">
+        <span class="badge-pulse"></span>
+        <span>Works Directly Inside <strong>Adobe Premiere Pro</strong> · <strong>Grass Valley EDIUS</strong> · <strong>DaVinci Resolve</strong></span>
       </div>
 
       <h1>
-        12 Ghante Ki Wedding Editing<br>
-        <span class="text-gold">Ab Sirf 15 Minute Me!</span>
+        Aapka Video Editor + AI Video Flow<br>
+        <span class="text-gold">12 Ghante Ki Wedding Editing Ab 15 Minute Me!</span>
       </h1>
 
       <p class="hero-subtitle">
-        India's First Native AI Wedding Editing Assistant. Automatic multicam sync without scratch audio, intelligent in-clip trimming, emotional ceremony peak detection, and beat-synced timeline creation directly inside your favorite NLE.
+        Aapko apna video editor badalne ki bilkul zaroorat nahi hai. <strong>AI Video Flow</strong> aapke <strong>Premiere Pro, EDIUS aur DaVinci Resolve</strong> ke sath direct connect hoke kaam karta hai — bina audio ke multi-cam sync karta hai aur fully-editable timeline sequence export karta hai.
       </p>
 
-      <div class="hero-cta-group">
-        <a href="https://github.com/sharmaeditoranil/Ai-Video-Flow/releases/latest" id="hero-download-mac" class="btn btn-lg btn-primary">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.66-.97 1.73-.84 2.76 1 .08 2.02-.51 2.54-1.26z"/></svg>
-          Download for Mac (.dmg)
-        </a>
+      <!-- 3-Step Visual Connection Diagram ("How it Connects") -->
+      <div class="workflow-connection-diagram">
+        <div class="wf-step">
+          <div class="wf-step-icon">📁</div>
+          <div class="wf-step-text">
+            <strong>1. Raw Wedding Footage</strong>
+            <span>Sony, Canon, Lumix &amp; Drones (2–8 Cams)</span>
+          </div>
+        </div>
 
-        <a href="https://github.com/sharmaeditoranil/Ai-Video-Flow/releases/latest" id="hero-download-win" class="btn btn-lg btn-secondary">
+        <div class="wf-arrow">
+          <span class="arrow-glow">⚡ Zero-Audio Sync</span>
+          <span class="arrow-symbol">➔</span>
+        </div>
+
+        <div class="wf-step wf-step-hub">
+          <div class="wf-step-icon">🤖</div>
+          <div class="wf-step-text">
+            <strong>2. AI Video Flow Engine</strong>
+            <span>In-Clip Trim, Emotion &amp; Beat Detect</span>
+          </div>
+        </div>
+
+        <div class="wf-arrow">
+          <span class="arrow-glow">📤 1-Click Export</span>
+          <span class="arrow-symbol">➔</span>
+        </div>
+
+        <div class="wf-step wf-step-target">
+          <div class="wf-step-icon">🎬</div>
+          <div class="wf-step-text">
+            <strong>3. Opens in Your Editor</strong>
+            <span>Premiere · EDIUS · DaVinci Resolve</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="https://github.com/sharmaeditoranil/Ai-Video-Flow/releases/latest" id="hero-download-win" class="btn btn-lg btn-primary">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
           Download for Windows (.exe)
         </a>
 
+        <a href="https://github.com/sharmaeditoranil/Ai-Video-Flow/releases/latest" id="hero-download-mac" class="btn btn-lg btn-secondary">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.66-.97 1.73-.84 2.76 1 .08 2.02-.51 2.54-1.26z"/></svg>
+          Download for Mac (.dmg)
+        </a>
+
         <a href="pricing.html" class="btn btn-lg btn-outline-gold">
-          🛒 Buy Wedding Packs (From ₹125/Wed)
+          👑 View Pricing &amp; Wedding Packs
         </a>
       </div>
 
       <div class="hero-platform-notice">
-        <span id="detected-os-badge">Detected: Mac & Windows 64-bit</span>
+        <span id="detected-os-badge">Detected: Mac &amp; Windows 64-bit</span>
         <span>•</span>
-        <span>🔒 100% Offline Local Processing — Raw footage stays on your computer</span>
+        <span>🔒 100% Offline Local Processing — Raw footage never leaves your PC</span>
+        <span>•</span>
+        <span>⚡ 100% Compatible with Song Dongles &amp; Title Presets</span>
       </div>
 
-      <!-- Hero Visual Mockup -->
+      <!-- Interactive 3-NLE Bridge Switcher Cards -->
+      <div class="nle-bridge-strip" role="tablist" aria-label="NLE Integration Selector">
+        <div class="nle-bridge-card active" data-editor="premiere" onclick="switchHeroNLE('premiere')" role="tab" aria-selected="true">
+          <div class="nle-icon pr">Pr</div>
+          <div class="nle-info">
+            <strong>Adobe Premiere Pro</strong>
+            <span>Native CEP Panel Bridge</span>
+          </div>
+          <span class="bridge-tag">Direct Sync</span>
+        </div>
+
+        <div class="nle-bridge-card" data-editor="edius" onclick="switchHeroNLE('edius')" role="tab" aria-selected="false">
+          <div class="nle-icon edius">ED</div>
+          <div class="nle-info">
+            <strong>Grass Valley EDIUS</strong>
+            <span>25fps PAL Indian Wedding Export</span>
+          </div>
+          <span class="bridge-tag">Top in India</span>
+        </div>
+
+        <div class="nle-bridge-card" data-editor="davinci" onclick="switchHeroNLE('davinci')" role="tab" aria-selected="false">
+          <div class="nle-icon davinci">Da</div>
+          <div class="nle-info">
+            <strong>DaVinci Resolve</strong>
+            <span>10-Bit Color FCPXML Roundtrip</span>
+          </div>
+          <span class="bridge-tag">Studio &amp; Free</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Mockup with Interactive Editor View -->
       <div class="hero-visual">
         <div class="mockup-wrapper">
           <div class="mockup-header">
@@ -338,17 +410,18 @@
               <span class="dot-yellow"></span>
               <span class="dot-green"></span>
             </div>
-            <div class="mockup-title">AI VIDEO FLOW v1.1.9 — MULTICAM WEDDING TIMELINE BUILDER</div>
-            <span class="badge badge-pill">RESOLVE & PREMIERE READY</span>
+            <div class="mockup-title" id="hero-nle-mockup-title">AI VIDEO FLOW ➔ ADOBE PREMIERE PRO (NATIVE CEP MULTICAM)</div>
+            <span class="badge badge-pill">1-CLICK TIMELINE BRIDGE</span>
           </div>
-          <img src="assets/hero_timeline.jpg" alt="AI Video Flow Wedding Timeline Interface Mockup" class="mockup-image">
+          
+          <img src="assets/premiere-pro-multicam.jpg" alt="AI Video Flow + Adobe Premiere Pro Multicam Editing Bridge" class="mockup-image" id="hero-nle-mockup-img">
           
           <div class="floating-badge badge-top-left">
-            <span>⚡ Zero-Audio Multicam Sync Active</span>
+            <span>⚡ Zero-Audio Sync: 4 Cams Synced in 15s</span>
           </div>
 
-          <div class="floating-badge badge-bottom-right">
-            <span>🎵 Beat Drop Locked: 118 BPM</span>
+          <div class="floating-badge badge-bottom-right" id="hero-badge-nle">
+            <span>🎬 Native CEP Sequence Created in Premiere Pro</span>
           </div>
         </div>
       </div>
@@ -900,6 +973,6 @@
     <span>Chat on WhatsApp</span>
   </a>
 
-  <script src="js/main.js?v=3.2"></script>
+  <script src="js/main.js?v=3.5"></script>
 </body>
 </html>
