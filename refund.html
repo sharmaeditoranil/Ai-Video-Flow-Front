@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5.2">
+  <link rel="stylesheet" href="css/style.css?v=5.3">
 
   <!-- JSON-LD Structured Data: BreadcrumbList + WebPage -->
   <script type="application/ld+json">
@@ -80,7 +80,7 @@
 </head>
 <body>
     <!-- Site Navigation -->
-    <!-- Site Navigation -->
+      <!-- Site Navigation -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-logo">
@@ -89,22 +89,126 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html#workflows">Workflows</a></li>
-        <li><a href="index.html#features">Features</a></li>
-
+        <!-- Product Dropdown -->
         <li class="has-dropdown">
-          <a href="index.html#editors">Integrations <span class="arrow-down">▾</span></a>
+          <a href="index.html#workflows">
+            Product
+            <svg class="nav-chevron" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href="davinci-resolve-wedding-editing.html">DaVinci Resolve</a></li>
-            <li><a href="premiere-pro-wedding-editing.html">Adobe Premiere Pro</a></li>
-            <li><a href="edius-wedding-video-editing.html">Grass Valley EDIUS</a></li>
-            <li><a href="zero-audio-multicam-sync.html">Zero-Audio Multicam Sync</a></li>
+            <li>
+              <a href="index.html#workflows">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </span>
+                <span>AI Workflows</span>
+              </a>
+            </li>
+            <li>
+              <a href="zero-audio-multicam-sync.html">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </span>
+                <span>Zero-Audio Multicam</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#features">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </span>
+                <span>Core Capabilities</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#download">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </span>
+                <span>Download Desktop App</span>
+              </a>
+            </li>
           </ul>
         </li>
 
+        <!-- Integrations Dropdown -->
+        <li class="has-dropdown">
+          <a href="index.html#editors">
+            Integrations
+            <svg class="nav-chevron" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="davinci-resolve-wedding-editing.html">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="7" cy="16" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+                </span>
+                <span>DaVinci Resolve</span>
+              </a>
+            </li>
+            <li>
+              <a href="premiere-pro-wedding-editing.html">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 15V9h3a2 2 0 010 4H8m7 2v-4a2 2 0 012-2"/></svg>
+                </span>
+                <span>Adobe Premiere Pro</span>
+              </a>
+            </li>
+            <li>
+              <a href="edius-wedding-video-editing.html">
+                <span class="dd-icon-box">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </span>
+                <span>Grass Valley EDIUS</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Pricing -->
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
+        <!-- Company Dropdown (Exact Match to Reference Image!) -->
+        <li class="has-dropdown">
+          <a href="about.html">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <ul class="dropdown-menu menu-right">
+            <li>
+              <a href="about.html">
+                <span class="dd-icon-box">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 012-2h8a2 2 0 012 2v16h2v2H2v-2h2zm4-14v2h2V7H8zm0 4v2h2v-2H8zm0 4v2h2v-2H8zm4-8v2h2V7h-2zm0 4v2h2v-2h-2zm0 4v2h2v-2h-2z"/></svg>
+                </span>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <span class="dd-icon-box">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </span>
+                <span>Contact Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="privacy.html">
+                <span class="dd-icon-box">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </span>
+                <span>Privacy Policy</span>
+              </a>
+            </li>
+            <li>
+              <a href="refund.html">
+                <span class="dd-icon-box">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                </span>
+                <span>Refund &amp; Terms</span>
+              </a>
+            </li>
+          </ul>
+        </li>
 
         <!-- Mobile Drawer CTA -->
         <li class="mobile-drawer-cta">
