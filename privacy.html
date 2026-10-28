@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4.0">
+  <link rel="stylesheet" href="css/style.css?v=5.0">
 
   <!-- JSON-LD Structured Data: BreadcrumbList + WebPage -->
   <script type="application/ld+json">
@@ -336,6 +336,8 @@
             <li><a href="contact.html">📞 Contact Us &amp; Support</a></li>
             <li><a href="privacy.html">🔒 Privacy Policy (100% Local)</a></li>
             <li><a href="terms.html">📜 Terms &amp; Conditions</a></li>
+            <li><a href="refund.html">💳 Cancellation &amp; Refund Policy</a></li>
+            <li><a href="shipping.html">⚡ Shipping &amp; Delivery Policy</a></li>
           </ul>
         </li>
 
@@ -362,28 +364,103 @@
     </div>
   </nav>
 
-  <main class="container" style="padding:60px 24px;max-width:850px;">
-    <h1 style="font-size:2.5rem;margin-bottom:20px;">Privacy Policy</h1>
-    <p style="color:var(--text-muted);margin-bottom:30px;">Last updated: October 2026</p>
+  <main class="container" style="padding:50px 24px 80px;max-width:920px;">
+    <!-- Quick Legal & Compliance Switcher -->
+    <div class="legal-nav-pills" aria-label="Legal Policy Navigation">
+      <a href="privacy.html" class="active">🔒 Privacy Policy</a>
+      <a href="terms.html">📜 Terms &amp; Conditions</a>
+      <a href="refund.html">🛡️ Cancellation &amp; Refund Policy</a>
+      <a href="shipping.html">⚡ Shipping &amp; Delivery Policy</a>
+      <a href="contact.html">📞 Contact &amp; Grievance Support</a>
+    </div>
 
-    <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:40px;line-height:1.8;">
-      <h3 style="color:#fff;margin-bottom:12px;">1. Core Privacy Commitment: Local Footage Privacy</h3>
-      <p style="margin-bottom:20px;">AI Video Flow operates primarily as an offline desktop software. Your clients' wedding footage, audio files, and photo media <strong>NEVER leave your local machine</strong>. We do not store, view, or stream your raw footage to any cloud server.</p>
+    <h1 style="font-size:2.4rem;margin-bottom:10px;">Privacy Policy</h1>
+    <p style="color:var(--text-muted);margin-bottom:28px;">Last Updated: October 28, 2026 &nbsp;|&nbsp; Compliant with India IT Act, 2000 &amp; DPDP Act, 2023</p>
 
-      <h3 style="color:#fff;margin-bottom:12px;">2. Information We Collect</h3>
-      <p style="margin-bottom:12px;">When you purchase a license or wedding credits on <code>https://aivideoflow.in</code> or <code>https://license.aivideoflow.in</code>, we collect:</p>
-      <ul style="margin-left:20px;margin-bottom:20px;color:var(--text-secondary);">
-        <li>Name and Email Address (for license delivery and software updates).</li>
-        <li>WhatsApp Mobile Number (for instant license key delivery and technical assistance).</li>
-        <li>Anonymous Hardware Fingerprint (to lock your license safely to your computer and prevent unauthorized sharing).</li>
-        <li>Billing details processed securely via Razorpay (we never store your credit/debit card numbers or UPI PINs).</li>
+    <div class="legal-highlights-grid">
+      <div class="legal-highlight-box">
+        <span class="lh-icon">🖥️</span>
+        <h4>100% Local Video Processing</h4>
+        <p>Your raw 4K wedding footage, audio, and client media never leave your local workstation.</p>
+      </div>
+      <div class="legal-highlight-box">
+        <span class="lh-icon">🔒</span>
+        <h4>PCI-DSS Encrypted Payments</h4>
+        <p>We never store your UPI PIN, CVV, or card numbers. All payments are processed by RBI-authorized gateways.</p>
+      </div>
+      <div class="legal-highlight-box">
+        <span class="lh-icon">🚫</span>
+        <h4>Zero Data Selling</h4>
+        <p>Your studio details, phone number, and email address are never sold or shared with third-party marketers.</p>
+      </div>
+    </div>
+
+    <div class="legal-content-card">
+      <h3>1. Introduction &amp; Core Privacy Commitment</h3>
+      <p>
+        This Privacy Policy explains how <strong>AI Video Flow</strong> (operated by <strong>Anil Sharma / Quick Art Photography Academy</strong>, having its principal office in Siwan, Bihar - 841226, India) collects, uses, stores, and protects your information when you visit <code>https://aivideoflow.in</code>, purchase licenses on <code>https://license.aivideoflow.in</code>, or use the AI Video Flow Desktop Application.
+      </p>
+      <p>
+        <strong>Zero Cloud Upload Guarantee:</strong> AI Video Flow operates as a native offline desktop software. Your clients' wedding footage, audio recordings, project timelines, and photos <strong>NEVER leave your local computer</strong>. We do not upload, view, store, or train external models on your private client footage.
+      </p>
+
+      <h3>2. Information We Collect</h3>
+      <p>When you register, download our software, or purchase a subscription / wedding credit pack, we collect only the minimum information required to fulfill your order:</p>
+      <ul>
+        <li><strong>Customer Identity &amp; Contact Data:</strong> Your Full Name, Studio/Business Name, Email Address, and WhatsApp Mobile Number (for instant license key delivery, invoices, and technical support).</li>
+        <li><strong>Hardware Machine Fingerprint:</strong> An anonymized cryptographic hash of your computer hardware ID used solely to bind your license key to your authorized workstation and enable self-service machine lock resets.</li>
+        <li><strong>Transaction &amp; Billing Metadata:</strong> Order ID, Payment Transaction Reference, Plan selected, and billing state/country for tax and accounting compliance.</li>
       </ul>
 
-      <h3 style="color:#fff;margin-bottom:12px;">3. Payment Gateway Security</h3>
-      <p style="margin-bottom:20px;">All online transactions are securely encrypted and processed by <strong>Razorpay</strong>, complying with PCI-DSS Level 1 standards. Your banking credentials remain completely private and secure.</p>
+      <h3>3. Payment Gateway &amp; Financial Security</h3>
+      <p>
+        All online payments (UPI, Credit/Debit Cards, NetBanking, Wallets) are processed through RBI-authorized, PCI-DSS Level 1 compliant payment gateways (such as <strong>Razorpay / Cashfree / PhonePe</strong>). AI Video Flow does not collect, process, or store your sensitive banking credentials, card numbers, CVV, or UPI PINs on our servers.
+      </p>
 
-      <h3 style="color:#fff;margin-bottom:12px;">4. Contacting Us</h3>
-      <p>If you have any questions about this Privacy Policy, please contact our support team at <a href="mailto:support@aivideoflow.in" style="color:var(--accent-gold);">support@aivideoflow.in</a> or WhatsApp at <a href="https://wa.me/919939800780" style="color:var(--accent-gold);">+91 9939800780</a>.</p>
+      <h3>4. How We Use Your Information</h3>
+      <ul>
+        <li>To generate and deliver your software License Keys and wedding project credits via screen, email, and WhatsApp.</li>
+        <li>To verify license validity and credit balance when activating projects inside the desktop application.</li>
+        <li>To provide customer support, AnyDesk troubleshooting, and software update notifications.</li>
+        <li>To comply with applicable Indian tax, accounting, and legal obligations.</li>
+      </ul>
+
+      <h3>5. Cookies &amp; Analytics</h3>
+      <p>
+        Our website uses essential session cookies required for checkout security, license portal authentication, and basic anonymous traffic diagnostics. You may disable non-essential cookies in your browser settings at any time without affecting your desktop software functionality.
+      </p>
+
+      <h3>6. Data Retention &amp; Your Rights</h3>
+      <p>
+        We retain your license and transaction records for as long as your software license or wedding credits remain active, and as required by Indian tax laws. Under the Digital Personal Data Protection (DPDP) Act, 2023, you have the right to access, correct, or request deletion of your personal contact information by emailing us at <a href="mailto:support@aivideoflow.in" style="color:var(--accent-gold);">support@aivideoflow.in</a>.
+      </p>
+
+      <h3>7. Grievance Officer (Pursuant to Information Technology Act, 2000)</h3>
+      <p>
+        In accordance with the Information Technology Act, 2000 and rules made thereunder, the name and contact details of the Grievance Officer are provided below:
+      </p>
+
+      <div class="merchant-info-box">
+        <h4>🛡️ Grievance Officer &amp; Merchant Contact Details</h4>
+        <div class="merchant-info-grid">
+          <div>
+            <strong>Grievance Officer Name</strong>
+            Mr. Anil Sharma (Founder &amp; Proprietor)
+          </div>
+          <div>
+            <strong>Legal / Trade Entity</strong>
+            Anil Sharma — Quick Art Photography Academy (AI Video Flow)
+          </div>
+          <div>
+            <strong>Registered Office Address</strong>
+            Quick Art Photography Academy, Siwan, Bihar - 841226, India
+          </div>
+          <div>
+            <strong>Direct Contact &amp; Timings</strong>
+            Phone/WhatsApp: +91 9939800780 &nbsp;|&nbsp; Email: support@aivideoflow.in (Mon–Sat, 10 AM – 8 PM IST)
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -470,28 +547,48 @@
             <li><a href="pricing.html">Pricing Plans (From ₹399/mo)</a></li>
             <li><a href="https://license.aivideoflow.in/index.php/buy" target="_blank">Buy Wedding Credits</a></li>
             <li><a href="https://license.aivideoflow.in/index.php/admin" target="_blank">Customer License Portal</a></li>
-            <li><a href="refund.html">7-Day Refund Guarantee</a></li>
-            <li><a href="pricing.html#faq">Frequently Asked Questions</a></li>
+            <li><a href="refund.html">Cancellation &amp; Refund Policy</a></li>
+            <li><a href="shipping.html">Shipping &amp; Delivery Policy</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Company &amp; Academy</h4>
+          <h4>Company &amp; Legal</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About Anil Sharma (Mentor)</a></li>
-            <li><a href="https://quickartphotography.in/" target="_blank">Quick Art Academy (Siwan) ↗</a></li>
-            <li><a href="contact.html">Contact Studio &amp; Support</a></li>
+            <li><a href="about.html">About Us (Anil Sharma)</a></li>
+            <li><a href="contact.html">Contact Us &amp; Support</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="https://quickartphotography.in/" target="_blank">Quick Art Academy (Siwan) ↗</a></li>
           </ul>
         </div>
       </div>
 
+      <!-- Payment Gateway Mandatory Compliance & Policy Bar -->
+      <div class="footer-legal-strip">
+        <div class="footer-policy-pills">
+          <a href="about.html">About Us</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="refund.html">Cancellation &amp; Refund Policy</a>
+          <a href="shipping.html">Shipping &amp; Delivery Policy</a>
+        </div>
+        <div class="footer-payment-methods">
+          <span class="pay-badge">🇮🇳 UPI / GPay / PhonePe</span>
+          <span class="pay-badge">💳 Visa / Mastercard / RuPay</span>
+          <span class="pay-badge">🏦 NetBanking</span>
+        </div>
+      </div>
+
       <div class="footer-bottom">
-        <div>© 2026 AI Video Flow (aivideoflow.in). All rights reserved. Crafted for Indian Wedding Filmmakers.</div>
+        <div>
+          © 2026 AI Video Flow (aivideoflow.in) — Operated by <strong>Anil Sharma (Quick Art Photography Academy, Siwan, Bihar - 841226)</strong>. All rights reserved.
+        </div>
         <div class="footer-security-badges">
           <span>🔒 256-Bit SSL Encrypted</span>
-          <span>⚡ Instant Activation</span>
+          <span>⚡ Instant Digital Delivery</span>
           <span>🇮🇳 Made in India</span>
         </div>
       </div>

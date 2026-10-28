@@ -3607,5 +3607,522 @@ body.menu-open {
   }
 }
 
+/* ==========================================================================
+   Payment Gateway Compliance & Legal Policy Styles
+   ========================================================================== */
+.legal-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+  padding: 12px;
+  background: rgba(13, 18, 29, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.legal-nav-pills a {
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legal-nav-pills a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.legal-nav-pills a.active {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-gold);
+  border-color: rgba(245, 158, 11, 0.4);
+  font-weight: 700;
+}
+
+.legal-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.legal-highlight-box {
+  background: rgba(13, 18, 29, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.legal-highlight-box .lh-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.legal-highlight-box h4 {
+  font-size: 0.96rem;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.legal-highlight-box p {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.legal-content-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  line-height: 1.8;
+  box-shadow: var(--shadow-card);
+}
+
+.legal-content-card h2,
+.legal-content-card h3 {
+  color: #fff;
+  font-size: 1.22rem;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legal-content-card h2:first-child,
+.legal-content-card h3:first-child {
+  margin-top: 0;
+}
+
+.legal-content-card p {
+  color: #cbd5e1;
+  margin-bottom: 16px;
+  font-size: 0.96rem;
+}
+
+.legal-content-card ul {
+  margin: 0 0 20px 20px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.legal-content-card ul li {
+  margin-bottom: 8px;
+}
+
+.merchant-info-box {
+  margin-top: 28px;
+  padding: 24px;
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: 14px;
+}
+
+.merchant-info-box h4 {
+  color: var(--accent-gold);
+  font-size: 1.02rem;
+  margin-bottom: 12px;
+}
+
+.merchant-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 24px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.merchant-info-grid div strong {
+  color: #fff;
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+/* Enhanced Footer Legal & Payment Gateway Compliance Strip */
+.footer-legal-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 24px;
+  background: rgba(13, 18, 29, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.footer-policy-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+}
+
+.footer-policy-pills a {
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-policy-pills a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-payment-methods {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pay-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .legal-highlights-grid,
+  .merchant-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .legal-content-card {
+    padding: 24px 20px;
+  }
+  .footer-legal-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+}
+
+/* ==========================================================================
+   Simple, Clean & Minimalist SaaS Design System Refinement
+   ========================================================================== */
+
+:root {
+  --bg-primary: #090b10;
+  --bg-secondary: #0e121a;
+  --bg-card: #0e131d;
+  --bg-card-hover: #131926;
+  --border-color: rgba(255, 255, 255, 0.07);
+  --border-highlight: rgba(255, 255, 255, 0.16);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-glow: none;
+}
+
+body {
+  background-color: #090b10;
+  background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.035) 0%, transparent 55%);
+  background-attachment: scroll;
+}
+
+/* Calm, Clean Typography */
+h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section {
+  padding: 76px 0;
+}
+
+.section-desc {
+  font-size: 1.04rem;
+  color: #94a3b8;
+  margin-bottom: 44px;
+}
+
+/* Remove Flashy Shimmer Beams & Infinite Pulse Animations for a Calm, Clean UI */
+.btn-primary::after,
+.btn-build-timelines::after,
+.mega-card-btn::after {
+  display: none !important;
+}
+
+.btn-primary,
+.btn-build-timelines,
+.floating-whatsapp {
+  animation: none !important;
+}
+
+/* Clean, Modern Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 11px 22px;
+  font-size: 0.94rem;
+  box-shadow: none;
+}
+
+.btn-lg {
+  padding: 13px 26px;
+  font-size: 0.98rem;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background: #f59e0b;
+  color: #090b10;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.btn-primary:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-outline-gold:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.btn-build-timelines {
+  background: #6366f1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+  font-size: 1rem;
+  padding: 14px 22px;
+}
+
+.btn-build-timelines:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* Clean Minimalist Badges */
+.badge,
+.badge-version,
+.badge-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  letter-spacing: 0.04em;
+}
+
+/* Simplified, Uncluttered Hero Section */
+.hero-section {
+  padding: 56px 0 48px;
+  background: none;
+}
+
+.hero-bridge-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  padding: 6px 16px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.08rem;
+  color: #94a3b8;
+  max-width: 720px;
+  margin: 16px auto 28px;
+  line-height: 1.65;
+}
+
+/* Remove Cluttered Diagram, Floating Badges & Duplicate Logo Strip in Hero */
+.workflow-connection-diagram,
+.floating-badge,
+.logos-section {
+  display: none !important;
+}
+
+.hero-platform-notice {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+/* Clean NLE Switcher Tabs */
+.nle-bridge-strip {
+  max-width: 860px;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.nle-bridge-card {
+  background: #0e131d;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: none;
+}
+
+.nle-bridge-card.active {
+  background: #131b2b;
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: none;
+}
+
+.nle-bridge-card.active::before {
+  display: none;
+}
+
+/* Clean Screenshot Frame */
+.mockup-wrapper {
+  background: #0d111a;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Clean Cards Across All Sections */
+.feature-card,
+.step-card,
+.plan-card,
+.whats-included-card,
+.contact-card,
+.wf-studio-card,
+.wf-telemetry-box,
+.showcase-box {
+  background: #0e131d;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.feature-card:hover,
+.step-card:hover,
+.plan-card:hover {
+  background: #121824;
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.plan-card.highlighted {
+  border-color: rgba(234, 179, 8, 0.4);
+  box-shadow: none;
+}
+
+/* Clean, Minimalist Footer */
+.site-footer {
+  background: #07090d;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 52px 0 32px;
+}
+
+/* Hide Bulky 4-Box Trust Bar in Footer to Keep Footer Simple & Clean */
+.footer-trust-bar {
+  display: none !important;
+}
+
+.footer-grid {
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.footer-creator-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+}
+
+.footer-legal-strip {
+  background: transparent;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0;
+  padding: 20px 0 4px;
+  margin-bottom: 16px;
+}
+
+.footer-bottom {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Subtle Floating WhatsApp Button */
+.floating-whatsapp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  font-size: 0.86rem;
+  border-radius: 999px;
+  background: #16a34a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+
 
 
