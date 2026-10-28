@@ -4387,10 +4387,11 @@ h2 {
 }
 
 .brand-logo img {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
-  box-shadow: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px !important;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .brand-name {
@@ -4592,6 +4593,36 @@ h2 {
     min-width: 100%;
   }
 }
+
+/* Official Original Company Logos in Send-To, Hero NLE Cards & Integrations Dropdown */
+.sendto-icon-box.davinci,
+.sendto-icon-box.premiere,
+.sendto-icon-box.edius {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.sendto-icon-box img,
+.nle-icon img,
+.dd-outline-icon img {
+  display: block;
+  object-fit: contain;
+  border-radius: 9px !important;
+}
+
+.nle-icon.pr,
+.nle-icon.edius,
+.nle-icon.davinci {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
 
 
 
