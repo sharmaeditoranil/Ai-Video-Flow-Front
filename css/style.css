@@ -4514,12 +4514,12 @@ h2 {
 .dd-text-block {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   text-align: left;
 }
 
 .dd-text-block strong {
-  font-size: 0.96rem;
+  font-size: 0.93rem;
   font-weight: 700;
   color: #f8fafc;
   line-height: 1.25;
@@ -4527,10 +4527,10 @@ h2 {
 }
 
 .dd-text-block span {
-  font-size: 0.83rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  color: #94a3b8;
-  line-height: 1.42;
+  color: #64748b;
+  line-height: 1.38;
   display: block;
 }
 
@@ -4539,7 +4539,7 @@ h2 {
 }
 
 .dropdown-menu li a:hover .dd-text-block span {
-  color: #cbd5e1;
+  color: #7c8ba1;
 }
 
 /* Right Header Action Buttons (Dashboard-style Icon Button + Primary CTA) */
