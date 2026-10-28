@@ -4122,6 +4122,229 @@ h2 {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
+/* ==========================================================================
+   Founder & CEO Spotlight (Exact Match to Anil Kumar Sharma Reference UI)
+   ========================================================================== */
+.founder-spotlight-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 20px auto 56px;
+}
+
+.founder-photo-wrap {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 26px;
+}
+
+.founder-photo-frame {
+  background: #000000;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+}
+
+.founder-photo-frame img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.02;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-badge-topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #14171f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.founder-badge-topleft .f-role {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f59e0b;
+  margin-bottom: 2px;
+}
+
+.founder-badge-topleft .f-name {
+  display: block;
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.founder-badge-bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #14171f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.founder-badge-bottomleft .f-stars {
+  color: #f59e0b;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.founder-badge-bottomleft .f-exp {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.founder-bio-content {
+  text-align: left;
+}
+
+.founder-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.founder-pill-tag .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.founder-bio-content h2 {
+  text-align: left;
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+
+.founder-roles-line {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 22px;
+}
+
+.founder-desc-text {
+  font-size: 1.04rem;
+  line-height: 1.8;
+  color: #94a3b8;
+  margin-bottom: 28px;
+  max-width: 620px;
+}
+
+.founder-desc-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.founder-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.btn-yt-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #dc2626;
+  color: #ffffff !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.3);
+}
+
+.btn-yt-red:hover {
+  background: #ef4444;
+  transform: translateY(-1px);
+}
+
+.btn-ig-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #9333ea 0%, #ec4899 52%, #f97316 100%);
+  color: #ffffff !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.28);
+}
+
+.btn-ig-gradient:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.btn-masterclass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f8fafc !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-masterclass-pill:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+  .founder-spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    max-width: 520px;
+  }
+}
+
+
 
 
 
