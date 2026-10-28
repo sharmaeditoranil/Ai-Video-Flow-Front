@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5.1">
+  <link rel="stylesheet" href="css/style.css?v=5.2">
 
   <!-- JSON-LD Structured Data: WebSite + Organization + SoftwareApplication + FAQPage -->
   <script type="application/ld+json">
@@ -219,276 +219,43 @@
   </style>
 </head>
 <body>
-  <!-- Site Navigation -->
+    <!-- Site Navigation -->
+    <!-- Site Navigation -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-logo">
         <img src="assets/icon.png" alt="AI Video Flow Logo">
-        <span class="brand-name"><span class="text-ai">Ai</span><span class="text-video">Video</span><span class="text-flow">Flow</span></span>
+        <span class="brand-name">AI Video Flow</span>
       </a>
 
       <ul class="nav-links">
-        <!-- 1. Product Mega Menu -->
-        <li class="has-dropdown has-mega-menu">
-          <a href="#workflows">Product <span class="arrow-down">▾</span></a>
-          <div class="mega-menu">
-            <div class="mega-menu-grid">
-              <!-- Col 1: Workflows (Step 1 From App) -->
-              <div class="mega-menu-col">
-                <div class="mega-col-heading">💍 AI Workflows (Step 1)</div>
-                <ul class="mega-item-list">
-                  <li>
-                    <a href="#workflows" onclick="selectStudioWorkflow('wedding')">
-                      <span class="m-icon">💍</span>
-                      <div class="m-text">
-                        <strong>Wedding Film</strong>
-                        <small>Teaser · Highlight · Full film</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#workflows" onclick="selectStudioWorkflow('reels')">
-                      <span class="m-icon">📱</span>
-                      <div class="m-text">
-                        <strong>Reels &amp; Shorts</strong>
-                        <small>9:16 vertical, fast cuts</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#workflows" onclick="selectStudioWorkflow('youtube')">
-                      <span class="m-icon">🎬</span>
-                      <div class="m-text">
-                        <strong>YouTube</strong>
-                        <small>Main edit + Shorts</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#workflows" onclick="selectStudioWorkflow('music')">
-                      <span class="m-icon">🎵</span>
-                      <div class="m-text">
-                        <strong>Music Video</strong>
-                        <small>Beat-synced montage</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#workflows" onclick="selectStudioWorkflow('podcast')">
-                      <span class="m-icon">🎙️</span>
-                      <div class="m-text">
-                        <strong>Podcast · long</strong>
-                        <small>Cut silences + 9:16 shorts</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#workflows" onclick="selectStudioWorkflow('tutorial')">
-                      <span class="m-icon">🎓</span>
-                      <div class="m-text">
-                        <strong>Tutorial / Class · long</strong>
-                        <small>Cut dead air + chapters</small>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+        <li><a href="index.html#workflows">Workflows</a></li>
+        <li><a href="index.html#features">Features</a></li>
 
-              <!-- Col 2: Core Capabilities -->
-              <div class="mega-menu-col">
-                <div class="mega-col-heading">⚡ Core Capabilities</div>
-                <ul class="mega-item-list">
-                  <li>
-                    <a href="zero-audio-multicam-sync.html">
-                      <span class="m-icon">⚡</span>
-                      <div class="m-text">
-                        <strong>Zero-Audio Multicam <span class="badge-mini">HOT</span></strong>
-                        <small>Sync drone &amp; audio-less cameras</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#features">
-                      <span class="m-icon">✂️</span>
-                      <div class="m-text">
-                        <strong>Smart In-Clip Trimming</strong>
-                        <small>Purge shaky pans &amp; blur moves</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#features">
-                      <span class="m-icon">💖</span>
-                      <div class="m-text">
-                        <strong>Indian Ritual &amp; Emotion AI</strong>
-                        <small>Varmala, Sindoor &amp; Pheras detection</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#features">
-                      <span class="m-icon">🎵</span>
-                      <div class="m-text">
-                        <strong>Beat-Synced Timeline</strong>
-                        <small>Auto cut to music audio transients</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#showcase">
-                      <span class="m-icon">🎥</span>
-                      <div class="m-text">
-                        <strong>Video Portfolio &amp; Demos</strong>
-                        <small>Real Indian wedding projects</small>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Col 3: Spotlight Card -->
-              <div class="mega-menu-col mega-featured-card">
-                <div class="mega-card-badge">DESKTOP APP v1.1.9</div>
-                <h4>AI Video Flow Studio</h4>
-                <p>100% Offline &amp; Private. Works directly with DaVinci Resolve, Premiere Pro &amp; EDIUS.</p>
-                <div class="mega-card-nles">
-                  <span>DaVinci</span> · <span>Premiere</span> · <span>EDIUS</span>
-                </div>
-                <a href="#download" class="mega-card-btn">Download Free App →</a>
-              </div>
-            </div>
-          </div>
+        <li class="has-dropdown">
+          <a href="index.html#editors">Integrations <span class="arrow-down">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="davinci-resolve-wedding-editing.html">DaVinci Resolve</a></li>
+            <li><a href="premiere-pro-wedding-editing.html">Adobe Premiere Pro</a></li>
+            <li><a href="edius-wedding-video-editing.html">Grass Valley EDIUS</a></li>
+            <li><a href="zero-audio-multicam-sync.html">Zero-Audio Multicam Sync</a></li>
+          </ul>
         </li>
 
-        <!-- 2. Solutions Mega Menu -->
-        <li class="has-dropdown has-mega-menu">
-          <a href="#editors">Solutions <span class="arrow-down">▾</span></a>
-          <div class="mega-menu">
-            <div class="mega-menu-grid solutions-grid">
-              <!-- Col 1: Supported NLE Bridges -->
-              <div class="mega-menu-col">
-                <div class="mega-col-heading">🎬 Supported Video Suites</div>
-                <ul class="mega-item-list">
-                  <li>
-                    <a href="davinci-resolve-wedding-editing.html">
-                      <span class="m-icon-logo dv">Da</span>
-                      <div class="m-text">
-                        <strong>DaVinci Resolve <span class="badge-mini">HOT</span></strong>
-                        <small>10-Bit Color &amp; FCPXML roundtrip</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="edius-wedding-video-editing.html">
-                      <span class="m-icon-logo ed">ED</span>
-                      <div class="m-text">
-                        <strong>Grass Valley EDIUS <span class="badge-mini">INDIA</span></strong>
-                        <small>25fps PAL Indian Wedding Master</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="premiere-pro-wedding-editing.html">
-                      <span class="m-icon-logo pr">Pr</span>
-                      <div class="m-text">
-                        <strong>Adobe Premiere Pro</strong>
-                        <small>Native CEP Multicam Sequence Bridge</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#editors">
-                      <span class="m-icon-logo fcp">FC</span>
-                      <div class="m-text">
-                        <strong>Final Cut Pro</strong>
-                        <small>FCPXML timeline interchange</small>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Col 2: By Creator Type -->
-              <div class="mega-menu-col">
-                <div class="mega-col-heading">💍 Solutions By Creator</div>
-                <ul class="mega-item-list">
-                  <li>
-                    <a href="#editors">
-                      <span class="m-icon">💍</span>
-                      <div class="m-text">
-                        <strong>Wedding Videography Studios</strong>
-                        <small>Cut full multi-day weddings in minutes</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#editors">
-                      <span class="m-icon">🎥</span>
-                      <div class="m-text">
-                        <strong>Freelance Video Editors</strong>
-                        <small>Scale 5x project capacity without burnout</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#editors">
-                      <span class="m-icon">🎙️</span>
-                      <div class="m-text">
-                        <strong>Podcasters &amp; YouTubers</strong>
-                        <small>Auto dead-air removal &amp; viral shorts</small>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#editors">
-                      <span class="m-icon">🏫</span>
-                      <div class="m-text">
-                        <strong>EdTech &amp; Academy Creators</strong>
-                        <small>Turn lectures into structured chapter videos</small>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- 3. Pricing -->
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-        <!-- 4. Resources -->
-        <li class="has-dropdown">
-          <a href="#faq">Resources <span class="arrow-down">▾</span></a>
-          <ul class="dropdown-menu menu-right">
-            <li><a href="#faq">❓ Frequently Asked Questions (FAQ)</a></li>
-            <li><a href="https://license.aivideoflow.in/index.php/admin" target="_blank">🔑 Customer License Portal</a></li>
-            <li><a href="#download">📥 Download Native Desktop App</a></li>
-            <li><a href="refund.html">🛡️ 7-Day Refund Guarantee</a></li>
-          </ul>
-        </li>
-
-        <!-- 5. Company -->
-        <li class="has-dropdown">
-          <a href="about.html">Company <span class="arrow-down">▾</span></a>
-          <ul class="dropdown-menu menu-right">
-            <li><a href="about.html">👤 About Mentor (Anil Sharma)</a></li>
-            <li><a href="contact.html">📞 Contact Us &amp; Support</a></li>
-            <li><a href="privacy.html">🔒 Privacy Policy (100% Local)</a></li>
-            <li><a href="terms.html">📜 Terms &amp; Conditions</a></li>
-          </ul>
-        </li>
-
-        <!-- Mobile Drawer CTA (only visible inside mobile slide drawer) -->
+        <!-- Mobile Drawer CTA -->
         <li class="mobile-drawer-cta">
-          <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">Buy Credits</a>
-          <a href="#download" class="btn btn-primary">Download App</a>
+          <a href="https://license.aivideoflow.in/index.php/admin" target="_blank" class="btn btn-secondary">License Portal</a>
+          <a href="index.html#download" class="btn btn-primary">Download App</a>
         </li>
       </ul>
 
       <div class="nav-actions">
-        <a href="https://license.aivideoflow.in/index.php/buy" target="_blank" class="btn btn-outline-gold">Buy Credits</a>
-        <a href="#download" class="btn btn-primary">Download App</a>
+        <a href="https://license.aivideoflow.in/index.php/admin" target="_blank" class="nav-portal-link">License Portal</a>
+        <a href="index.html#download" class="btn btn-primary">Download App</a>
         <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
       </div>
     </div>
@@ -1134,12 +901,12 @@
           </div>
 
           <div class="founder-photo-frame">
-            <img src="assets/anil-sharma-mentor.webp" alt="Anil Kumar Sharma — Founder & CEO of AI Photo Flow, AI Video Flow, AI Bot Flow & Quick Art Photography Academy" width="600" height="600">
+            <img src="assets/anil-sharma-mentor.webp" alt="Anil Kumar Sharma — Founder & CEO of AI Video Flow" width="600" height="600">
           </div>
 
           <div class="founder-badge-bottomleft">
             <div class="f-stars">★★★★★</div>
-            <div class="f-exp">10+ Years Filmmaking Experience</div>
+            <div class="f-exp">10+ Years Filmmaking &amp; AI Experience</div>
           </div>
         </div>
 
@@ -1147,36 +914,35 @@
         <div class="founder-bio-content">
           <div class="founder-pill-tag">
             <span class="dot"></span>
-            THE FOUNDER &amp; LEAD MENTOR
+            FOUNDER &amp; PRODUCT ARCHITECT
           </div>
 
           <h2>Anil Kumar Sharma</h2>
 
           <div class="founder-roles-line">
-            Founder &amp; CEO | AI Product Developer | Creative Educator
+            Founder &amp; CEO | AI Product Developer | Post-Production Architect
           </div>
 
           <p class="founder-desc-text">
-            Anil Kumar Sharma AI aur creative technology ke kshetra mein kaam karte hain. Woh <strong>AI Photo Flow, AI Video Flow aur AI Bot Flow</strong> ke founder aur developer hain, aur in platforms ke product development aur operations mein sakriya roop se jude hue hain. Woh <strong>Quick Art Photography Academy</strong> bhi chalate hain, jahan photography aur video editing ki training di jaati hai.
+            Anil Kumar Sharma AI aur creative post-production technology ke kshetra mein kaam karte hain. Woh <strong>AI Video Flow, AI Photo Flow aur AI Bot Flow</strong> ke founder aur lead developer hain, aur in platforms ke core AI engine, native NLE plugins (DaVinci Resolve, Premiere Pro &amp; EDIUS) aur product operations mein sakriya roop se jude hue hain.
           </p>
 
-          <!-- Row 1: YouTube & Instagram Buttons -->
+          <p class="founder-desc-text" style="margin-top:-12px;">
+            10+ saal ke real-world video production anubhav ke baad, unhone <strong>AI Video Flow</strong> ka nirmaan kiya taaki video editors ko ghanto ke manual multicam sync, shaky clip filtering aur beat-cutting se azaadi mil sake.
+          </p>
+
+          <!-- Product Action Buttons -->
           <div class="founder-btn-row">
-            <a href="https://www.youtube.com/@QuickartPhotographyAcademy/videos" target="_blank" rel="noopener noreferrer" class="btn-yt-red">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Watch Free Tutorials on YouTube
+            <a href="about.html" class="btn btn-primary">
+              About AI Video Flow →
             </a>
 
-            <a href="https://www.instagram.com/quick.art.photography.academy/" target="_blank" rel="noopener noreferrer" class="btn-ig-gradient">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              Follow on Instagram ↗
+            <a href="pricing.html" class="btn btn-secondary">
+              View Pricing &amp; Plans
             </a>
-          </div>
 
-          <!-- Row 2: Explore 14-Week Masterclass -->
-          <div>
-            <a href="https://quickartphotography.in/" target="_blank" rel="noopener noreferrer" class="btn-masterclass-pill">
-              Explore 14-Week Masterclass &nbsp;→
+            <a href="contact.html" class="btn-masterclass-pill">
+              Contact Support
             </a>
           </div>
         </div>
@@ -1277,8 +1043,8 @@
         <div class="trust-item">
           <div class="trust-icon">🎓</div>
           <div class="trust-text">
-            <strong>1,800+ Filmmakers Trained</strong>
-            <span>By Anil Sharma at Quick Art Academy</span>
+            <strong>10,000+ Projects Processed</strong>
+            <span>Trusted by Wedding & Commercial Studios</span>
           </div>
         </div>
       </div>
@@ -1294,7 +1060,7 @@
             India's World-Class Native AI Wedding Video Editing Assistant. Built by wedding filmmakers to eliminate robotic rough-cuts in DaVinci Resolve, Adobe Premiere Pro, and EDIUS.
           </p>
           <div class="footer-creator-pill">
-            <span>Built with ❤️ by <strong>Anil Sharma</strong> (Founder, Quick Art Academy)</span>
+            <span>Built with ❤️ by <strong>Anil Sharma</strong> (Founder & CEO, AI Video Flow)</span>
           </div>
           <div class="footer-social-row">
             <a href="https://wa.me/919939800780" target="_blank" class="footer-social-btn whatsapp">💬 WhatsApp Hotline</a>
@@ -1338,11 +1104,11 @@
         <div class="footer-col">
           <h4>Company &amp; Legal</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About Us (Anil Sharma)</a></li>
+            <li><a href="about.html">About AI Video Flow</a></li>
             <li><a href="contact.html">Contact Us &amp; Support</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
-            <li><a href="https://quickartphotography.in/" target="_blank">Quick Art Academy (Siwan) ↗</a></li>
+            <li><a href="shipping.html">Shipping &amp; Delivery Policy</a></li>
           </ul>
         </div>
       </div>
@@ -1367,7 +1133,7 @@
 
       <div class="footer-bottom">
         <div>
-          © 2026 AI Video Flow (aivideoflow.in) — Operated by <strong>Anil Sharma (Quick Art Photography Academy, Siwan, Bihar - 841226)</strong>. All rights reserved.
+          © 2026 AI Video Flow (aivideoflow.in) — Operated by <strong>Anil Kumar Sharma — AI Video Flow (Siwan, Bihar - 841226)</strong>. All rights reserved.
         </div>
         <div class="footer-security-badges">
           <span>🔒 256-Bit SSL Encrypted</span>

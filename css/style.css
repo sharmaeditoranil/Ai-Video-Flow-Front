@@ -4344,6 +4344,127 @@ h2 {
   }
 }
 
+/* ==========================================================================
+   Clean, Professional SaaS Header Refinement
+   ========================================================================== */
+.site-header {
+  background: rgba(9, 11, 16, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 12px 0;
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.brand-name {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links > li > a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.18s ease;
+}
+
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+  color: #ffffff;
+}
+
+.dropdown-menu {
+  min-width: 220px;
+  background: #0e131d;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+  padding: 6px;
+  margin-top: 6px;
+}
+
+.dropdown-menu li a {
+  padding: 9px 12px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  border-radius: 7px;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  transform: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-portal-link {
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.nav-portal-link:hover {
+  color: #ffffff;
+}
+
+.nav-actions .btn-primary {
+  padding: 8px 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: 8px !important;
+  box-shadow: none;
+}
+
+@media (max-width: 992px) {
+  .nav-portal-link {
+    display: none;
+  }
+}
+
+
 
 
 
