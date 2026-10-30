@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Smooth Anchor Scrolling
   initSmoothScroll();
+
+  // 5. Name + WhatsApp popup before a Windows / Mac download
+  initDownloadGate();
 });
 
 function detectUserOS() {
@@ -340,4 +343,109 @@ function triggerTimelineBuild() {
     }
   }, 350);
 }
+
+// Download links point at the license server; the popup saves name + WhatsApp number there, then starts the download.
+// Without JavaScript the links still download directly.
+const LICENSE_SERVER = 'https://license.aivideoflow.in/index.php';
+const DL_LABELS = { windows: 'Windows 10/11', 'mac-arm64': 'Mac (Apple Silicon)', 'mac-x86_64': 'Mac (Intel)' };
+
+function initDownloadGate() {
+  const links = document.querySelectorAll('[data-download]');
+  if (!links.length) return;
+
+  const modal = document.createElement('div');
+  modal.className = 'dl-modal';
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="dl-card" role="dialog" aria-modal="true" aria-labelledby="dl-title">
+      <button type="button" class="dl-close" aria-label="Close">&times;</button>
+      <h3 id="dl-title">Download AI Video Flow</h3>
+      <p class="dl-sub" id="dl-sub">Enter your details and the download starts.</p>
+      <form id="dl-form" autocomplete="on">
+        <div class="dl-chip" id="dl-chip" hidden>
+          <label><input type="radio" name="chip" value="mac-arm64" checked> Apple Silicon (M1-M4)</label>
+          <label><input type="radio" name="chip" value="mac-x86_64"> Intel Mac</label>
+        </div>
+        <label class="dl-label" for="dl-name">Your Name *</label>
+        <input id="dl-name" name="name" type="text" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+        <label class="dl-label" for="dl-phone">WhatsApp Number *</label>
+        <input id="dl-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="98765 43210" required>
+        <p class="dl-error" id="dl-error" hidden></p>
+        <button type="submit" class="btn btn-primary dl-submit" id="dl-submit">Submit &amp; Download</button>
+        <p class="dl-note">Setup help and updates on WhatsApp. No spam.</p>
+      </form>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const form = modal.querySelector('#dl-form');
+  const chip = modal.querySelector('#dl-chip');
+  const err = modal.querySelector('#dl-error');
+  const submit = modal.querySelector('#dl-submit');
+  let platform = 'windows';
+
+  const close = () => { modal.hidden = true; document.body.style.overflow = ''; };
+  modal.querySelector('.dl-close').addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) close(); });
+  chip.addEventListener('change', () => {
+    platform = form.chip.value;
+    modal.querySelector('#dl-sub').textContent = `${DL_LABELS[platform]} · enter your details and the download starts.`;
+  });
+
+  links.forEach((link) => link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const choice = link.dataset.download;
+    chip.hidden = choice !== 'mac';
+    platform = choice === 'mac' ? form.chip.value : choice;
+    modal.querySelector('#dl-sub').textContent = `${DL_LABELS[platform]} · enter your details and the download starts.`;
+    err.hidden = true;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    try {
+      const saved = JSON.parse(localStorage.getItem('avf-dl-lead') || '{}');
+      if (saved.name && !form.name.value) form.name.value = saved.name;
+      if (saved.phone && !form.phone.value) form.phone.value = saved.phone;
+    } catch (x) { /* storage off */ }
+    setTimeout(() => (form.name.value ? form.phone : form.name).focus(), 50);
+  }));
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const phone = form.phone.value.trim();
+    if (!name || phone.replace(/\D/g, '').length < 10) {
+      err.textContent = 'Please enter your name and 10-digit WhatsApp number.';
+      err.hidden = false;
+      return;
+    }
+    err.hidden = true;
+    submit.disabled = true;
+    submit.textContent = 'Starting download…';
+    let url = `${LICENSE_SERVER}/download/${platform}`;
+    try {
+      const res = await fetch(`${LICENSE_SERVER}/api/v1/download/lead`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, platform }),
+      });
+      const d = await res.json();
+      if (!d.success && res.status === 400) {
+        err.textContent = d.error;
+        err.hidden = false;
+        return;
+      }
+      if (d.url) url = d.url;
+    } catch (x) {
+      // Server unreachable: never block the download
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Submit & Download';
+    }
+    if (!err.hidden) return;
+    try { localStorage.setItem('avf-dl-lead', JSON.stringify({ name, phone })); } catch (x) { /* storage off */ }
+    window.location.href = url;
+    modal.querySelector('#dl-sub').textContent = 'Your download has started. Open the file when it finishes.';
+    setTimeout(close, 2500);
+  });
+}
+
 
