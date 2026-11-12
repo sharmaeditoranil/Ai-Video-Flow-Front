@@ -4659,3 +4659,253 @@ h2 {
 
 
 
+
+/* ==========================================================================
+   Phone & tablet fixes — kept last so they win over the desktop header rules above
+   (a later `.nav-links { display: flex }` used to keep the mobile drawer open over every page)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links > li > a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 13px 18px;
+  }
+
+  .dropdown-menu,
+  .dropdown-menu.menu-right,
+  .nav-links > li:nth-last-child(2) .dropdown-menu,
+  .nav-links > li:nth-last-child(3) .dropdown-menu {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    margin-top: 4px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Grid items default to their content's width; let the workflow demo shrink to the screen */
+  .wf-studio-layout > *,
+  .wf-grid > *,
+  .wf-sendto-grid > *,
+  .wf-step-row > *,
+  .showcase-box > *,
+  .contact-grid > *,
+  .plans-grid-3 > *,
+  .plans-grid-4 > *,
+  .stats-grid-4 > *,
+  .footer-grid > * {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Long button labels wrap instead of running off the screen (desktop keeps them on one line with !important) */
+  .btn {
+    white-space: normal !important;
+    flex-shrink: 1;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    line-height: 1.35;
+  }
+
+  .wf-studio-card,
+  .wf-telemetry-box {
+    padding: 20px 16px;
+  }
+
+  /* Long words: code samples, URLs and e-mail addresses in policy pages */
+  code,
+  pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  p a,
+  li a,
+  td a {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-security-badges {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  /* Room at the end of the page so the floating WhatsApp button never covers the last lines */
+  body {
+    padding-bottom: 76px;
+  }
+
+  .floating-whatsapp {
+    bottom: 14px;
+    right: 14px;
+    padding: 10px 16px 10px 14px;
+  }
+}
+
+/* =========================================================
+   Pay-As-You-Go pricing cards (.pricing-grid / .pricing-card)
+   Used by the "Pay As You Go — Koi Monthly Lock-In Nahi" section.
+   ========================================================= */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 34px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow-card);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--accent-gold);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.1) 0%, rgba(18, 24, 38, 0.95) 100%);
+  box-shadow: var(--shadow-glow);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: var(--accent-gold);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 5px 16px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pricing-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.pricing-header p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  min-height: 2.6em;
+}
+
+.pricing-price {
+  font-size: clamp(1.9rem, 2.3vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin: 20px 0 6px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pricing-price .term {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pricing-unit-rate {
+  font-size: 0.86rem;
+  color: var(--accent-gold-bright);
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 28px;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+.pricing-features li svg {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pricing-features li strong {
+  color: #fff;
+}
+
+.pricing-card > .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (max-width: 1100px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 36px;
+  }
+  .pricing-card {
+    padding: 30px 20px 24px;
+  }
+  .pricing-price {
+    font-size: 2.2rem;
+  }
+  .pricing-header p {
+    min-height: 0;
+  }
+}

@@ -347,6 +347,20 @@ function triggerTimelineBuild() {
 // Download links point at the license server; the popup saves name + WhatsApp number there, then starts the download.
 // Without JavaScript the links still download directly.
 const LICENSE_SERVER = 'https://license.aivideoflow.in/index.php';
+const LEAD_API = '/api/lead.php';
+
+// Save a lead in the admin panel (/admin), which forwards it to WhatsApp / webhook.
+// Fire-and-forget: keepalive lets it finish even if the page navigates away.
+function saveLead(data) {
+  try {
+    fetch(LEAD_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, page: location.pathname }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch (x) { /* never block the visitor */ }
+}
 const DL_LABELS = { windows: 'Windows 10/11', 'mac-arm64': 'Mac (Apple Silicon)', 'mac-x86_64': 'Mac (Intel)' };
 
 function initDownloadGate() {
@@ -422,6 +436,7 @@ function initDownloadGate() {
     submit.disabled = true;
     submit.textContent = 'Starting download…';
     let url = `${LICENSE_SERVER}/download/${platform}`;
+    saveLead({ name, phone, platform, source: 'download' });
     try {
       const res = await fetch(`${LICENSE_SERVER}/api/v1/download/lead`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },

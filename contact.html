@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5.8">
+  <link rel="stylesheet" href="css/style.css?v=5.9">
 
   <!-- JSON-LD Structured Data: BreadcrumbList + ContactPage + LocalBusiness -->
   <script type="application/ld+json">
@@ -660,7 +660,7 @@
     <span>Chat on WhatsApp</span>
   </a>
 
-  <script src="js/main.js?v=5.0"></script>
+  <script src="js/main.js?v=6.0"></script>
   <script>
     function handleContactSubmit(e) {
       e.preventDefault();
@@ -673,6 +673,10 @@
 
       const waText = `Namaste AI Video Flow,%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Studio:* ${encodeURIComponent(studio)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Software:* ${encodeURIComponent(software)}%0A*Topic:* ${encodeURIComponent(topic)}%0A%0A*Message:*%0A${encodeURIComponent(message)}`;
       
+      if (typeof saveLead === 'function') {
+        saveLead({ source: 'contact', name, phone, studio: studio === 'N/A' ? '' : studio, software, topic, message });
+      }
+
       const status = document.getElementById('form-status');
       status.style.display = 'block';
       status.style.color = '#10b981';
